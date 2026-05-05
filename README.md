@@ -1,6 +1,6 @@
 # AI-Powered-Fashion-Generator
 
-his project is a Text-to-Fashion Image Generation App built with a custom GAN model to generate realistic fashion images from text prompts using CLIP-guided supervision. It uses the DressCodePromptSketch dataset and improves generation quality using CLIP loss, WGAN-GP, and Adaptive Instance Normalization (AdaIN).
+This project is a Text-to-Fashion Image Generation App built with a custom GAN model to generate realistic fashion images from text prompts using CLIP-guided supervision. It uses the DressCodePromptSketch dataset and improves generation quality using CLIP loss, WGAN-GP, and Adaptive Instance Normalization (AdaIN).
 
 🌐 Demo
 <img width="714" height="458" alt="image" src="https://github.com/user-attachments/assets/ae594b4a-a199-4433-a2c0-946df71e55ca" />
@@ -16,12 +16,14 @@ his project is a Text-to-Fashion Image Generation App built with a custom GAN mo
 ✅ Visualization and checkpoint saving per epoch
 ✅ Optimized for GPU training (Kaggle/Colab)
 ✅ Output: 64×64 images, upscaled to 256×256 using Real-ESRGAN in the browser
+
 🖼️ UI & UX (React)
 Real-time image upscaling using canvas for enhanced display
 Prompt suggestions and animated loading visuals
 Toggle between original and enhanced images
 Download option for generated images
 Responsive and themed using custom CSS variables
+
 🖥️ Backend (Flask)
 REST API with /generate endpoint
 Accepts JSON prompt from frontend and returns the generated image
@@ -29,16 +31,16 @@ Handles inference and image conversion to PNG
 CORS enabled for local frontend communication
 
 🧠 Model Architecture
-Generator
 
+Generator
 Fully connected + AdaIN + ConvTranspose layers
 Input: CLIP text embedding → Output: 64×64 RGB image
-Discriminator
 
+Discriminator
 Spectral normalized CNN + Fully Connected layers
 Conditional on both image and text embedding
-CLIP Model
 
+CLIP Model
 openai/clip-vit-base-patch32 (via 🤗 Transformers)
 Used for text embedding and CLIP loss
 
